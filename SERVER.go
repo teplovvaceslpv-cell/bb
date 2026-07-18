@@ -23,10 +23,10 @@ func check(w http.ReponseWriter, r *http.Request){
 	fmt.Fprintf(url)
 }
 	
-func run(){
+func run(w http.ResponseWriter, r *http.Request){
 	url = r.FormValue("url")
 }
 
-func stop(){
+func stop(w http.ResponseWriter, r *http.Request){
 	url = "none"	
 }
