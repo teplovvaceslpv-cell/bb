@@ -25,6 +25,7 @@ func check(w http.ResponseWriter, r *http.Request){
 	
 func run(w http.ResponseWriter, r *http.Request){
 	url = r.FormValue("url")
+	r.Body.Close()
 }
 
 func stop(w http.ResponseWriter, r *http.Request){
