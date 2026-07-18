@@ -20,7 +20,7 @@ func register(w http.ResponseWriter, r *http.Request){
 }
 
 func check(w http.ReponseWriter, r *http.Request){
-	fmt.Fprintf(url)
+	fmt.Fprintf(w, url)
 }
 	
 func run(w http.ResponseWriter, r *http.Request){
