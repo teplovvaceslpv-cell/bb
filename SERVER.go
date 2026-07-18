@@ -7,8 +7,8 @@ import(
 var url string = "none"
 
 func main(){
-	http.FuncHandler("/register", register)
-	http.FuncHandler("/check", check)
+	http.HandleFunc("/register", register)
+	http.HandleFunc("/check", check)
 	http.HandleFunc("/run", run)
 	http.HandleFunc("/stop", stop)
 
@@ -19,7 +19,7 @@ func register(w http.ResponseWriter, r *http.Request){
 	fmt.Println("Новый клиент подключился.")
 }
 
-func check(w http.ReponseWriter, r *http.Request){
+func check(w http.ResponseWriter, r *http.Request){
 	fmt.Fprintf(w, url)
 }
 	
